@@ -7,11 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
+import { SetupComponent } from './setup/setup.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SetupComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatButtonModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

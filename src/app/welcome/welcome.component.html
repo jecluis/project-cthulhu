@@ -5,7 +5,9 @@
     <h1 *ngIf="cur_msg_idx === i" @fadeAnimation>{{msg}}</h1>
   </div>
 
-  <button mat-raised-button style="background-color: #30BA78;"
+  <button mat-raised-button
+      routerLink="/setup"
+      style="background-color: #30BA78;"
       *ngIf="showStartButton()"
       @fadeStartButton>
     Start
