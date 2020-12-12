@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SetupDependenciesComponent } from './setup/setup-dependencies/setup-dependencies.component';
 import { SetupNetworkComponent } from './setup/setup-network/setup-network.component';
 import { SetupStorageComponent } from './setup/setup-storage/setup-storage.component';
 import { SetupComponent } from './setup/setup.component';
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   { path: 'setup-network', component: SetupNetworkComponent,
     data: { animation: 'setup-network' }
+  },
+  { path: 'setup-dependencies', component: SetupDependenciesComponent,
+    data: { animation: 'setup-dependencies' }
   }
 ];
 

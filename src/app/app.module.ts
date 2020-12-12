@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SetupNetworkComponent } from './setup/setup-network/setup-network.component';
+import { SetupDependenciesComponent } from './setup/setup-dependencies/setup-dependencies.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { SetupNetworkComponent } from './setup/setup-network/setup-network.compo
     SetupComponent,
     SetupInventoryItemComponent,
     SetupStorageComponent,
-    SetupNetworkComponent
+    SetupNetworkComponent,
+    SetupDependenciesComponent
   ],
   imports: [
     BrowserModule,
