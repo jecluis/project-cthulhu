@@ -30,6 +30,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { OverviewDashboardComponent } from './overview-dashboard/overview-dashboard.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     SetupNetworkComponent,
     SetupDependenciesComponent,
     SetupFinishComponent,
-    DashboardComponent
+    DashboardComponent,
+    OverviewDashboardComponent
   ],
   imports: [
     BrowserModule,
