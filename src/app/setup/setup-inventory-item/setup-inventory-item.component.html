@@ -1,0 +1,17 @@
+<div fxLayout="row" fxLayoutAlign="start center"
+    *ngIf="isInventoryFinishedSuccess()">
+  <mat-icon class="checklist-prefix success">check</mat-icon>
+  <span>{{label}} inventory finished</span>
+</div>
+<div fxLayout="row" fxLayoutAlign="start center"
+    *ngIf="isInventoryFinishedError()">
+  <mat-icon class="checklist-prefix error">cancel</mat-icon>
+  <span>Error obtaining {{label}} inventory: {{getErrorMessage()}}</span> 
+</div>
+<div fxLayout="row" fxLayoutAlign="start center" *ngIf="isInventoryRunning()">
+  <div class="checklist-prefix">
+    <mat-spinner [diameter]="16">
+    </mat-spinner>
+  </div>
+  <span>Obtaining {{label}} inventory...</span>
+</div>

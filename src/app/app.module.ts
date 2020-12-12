@@ -9,12 +9,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { SetupComponent } from './setup/setup.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SetupInventoryItemComponent } from './setup/setup-inventory-item/setup-inventory-item.component';
+import { MatDividerModule } from '@angular/material/divider';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    SetupComponent
+    SetupComponent,
+    SetupInventoryItemComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +29,9 @@ import { MatCardModule } from '@angular/material/card';
     FlexLayoutModule,
     MatButtonModule,
     MatCardModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
