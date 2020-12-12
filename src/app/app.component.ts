@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { fadeInOutAnimation, slideInAnimation } from './animations';
+import { slideInAnimation } from './animations';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,6 @@ import { fadeInOutAnimation, slideInAnimation } from './animations';
   styleUrls: ['./app.component.scss'],
   animations: [
     slideInAnimation,
-    fadeInOutAnimation
   ]
 })
 export class AppComponent {
