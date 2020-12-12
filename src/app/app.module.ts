@@ -21,6 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SetupNetworkComponent } from './setup/setup-network/setup-network.component';
 import { SetupDependenciesComponent } from './setup/setup-dependencies/setup-dependencies.component';
+import { SetupFinishComponent } from './setup/setup-finish/setup-finish.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { SetupDependenciesComponent } from './setup/setup-dependencies/setup-dep
     SetupInventoryItemComponent,
     SetupStorageComponent,
     SetupNetworkComponent,
-    SetupDependenciesComponent
+    SetupDependenciesComponent,
+    SetupFinishComponent
   ],
   imports: [
     BrowserModule,

@@ -46,7 +46,8 @@
 
     <div fxLayout="row" fxLayoutAlign="end center" style="width: 100%">
       <button mat-raised-button class="button-next"
-          [disabled]="!hasFinished()">
+          [disabled]="!hasFinished()"
+          routerLink="/setup-finish">
         Next
       </button>
     </div>
