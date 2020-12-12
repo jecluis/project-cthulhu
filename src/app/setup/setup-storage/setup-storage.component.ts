@@ -77,4 +77,8 @@ export class SetupStorageComponent implements OnInit {
     }
   }
 
+  public hasSelectedStrategy(): boolean {
+    return (this.getDiskStrategy() !== "" && this.getRAID() !== "");
+  }
+
 }

@@ -156,7 +156,8 @@
     <span></span>
 
     <div fxLayout="row" fxLayoutAlign="end center" style="width: 100%">
-      <button mat-raised-button class="button-next">
+      <button mat-raised-button class="button-next"
+          routerLink="/setup-network" [disabled]="!hasSelectedStrategy()">
         Next
       </button>
     </div>

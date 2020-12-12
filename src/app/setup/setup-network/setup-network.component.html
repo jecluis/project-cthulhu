@@ -1,0 +1,49 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+
+  <mat-card class="mat-elevation-z8 content-card"
+      fxLayout="column" fxLayoutAlign="space-between start">
+
+    <div matCardTitle>
+      <h1>Network</h1>
+      <mat-divider></mat-divider>
+    </div>
+
+    <div matCardContent class="content">
+
+      <div fxLayout="column" fxLayoutAlign="start start" style="padding: 20px">
+
+        <div fxLayout="row">
+          <mat-form-field appearance="fill">
+            <mat-label>Storage Name</mat-label>
+            <input matInput required>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+          <mat-form-field appearance="fill">
+            <mat-label>Network Time Server</mat-label>
+            <mat-select>
+              <mat-option value="pt">0.pt.pool.ntp.org</mat-option>
+              <mat-option value="eu-2">2.europe.pool.ntp.org</mat-option>
+              <mat-option value="eu-3">3.europe.pool.ntp.org</mat-option>
+            </mat-select>
+
+
+          </mat-form-field>
+        </div>
+
+      </div>
+
+    </div>
+
+    <span></span>
+
+    <div fxLayout="row" fxLayoutAlign="end center" style="width: 100%">
+      <button mat-raised-button class="button-next">
+        Next
+      </button>
+    </div>
+
+  </mat-card>
+
+</div>

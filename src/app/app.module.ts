@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { SetupNetworkComponent } from './setup/setup-network/setup-network.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     WelcomeComponent,
     SetupComponent,
     SetupInventoryItemComponent,
-    SetupStorageComponent
+    SetupStorageComponent,
+    SetupNetworkComponent
   ],
   imports: [
     BrowserModule,
