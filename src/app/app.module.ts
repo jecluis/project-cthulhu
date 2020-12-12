@@ -13,6 +13,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SetupInventoryItemComponent } from './setup/setup-inventory-item/setup-inventory-item.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { SetupStorageComponent } from './setup/setup-storage/setup-storage.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -20,7 +26,8 @@ import { MatDividerModule } from '@angular/material/divider';
     AppComponent,
     WelcomeComponent,
     SetupComponent,
-    SetupInventoryItemComponent
+    SetupInventoryItemComponent,
+    SetupStorageComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +39,11 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     MatProgressSpinnerModule,
     MatDividerModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

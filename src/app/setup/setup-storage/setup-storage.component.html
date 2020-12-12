@@ -1,0 +1,166 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+
+  <mat-card class="mat-elevation-z8 content-card"
+      fxLayout="column" fxLayoutAlign="space-between start">
+
+    <div matCardTitle>
+      <h1>Storage</h1>
+      <mat-divider></mat-divider>
+    </div>
+
+    <div matCardContent class="content">
+
+      <div fxLayout="column" fxLayoutAlign="start start" style="padding: 20px">
+
+        <div class="disks-header content"
+            fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>storage</mat-icon>
+            <span style="padding-left: 20px">6 disks</span>
+          </div>
+          <span></span>
+          <span>12 TB</span>
+        </div>
+
+        <div class="disks-details"
+            fxLayout="column">
+
+          <div fxLayout="row" fxLayoutAlign="space-between center"
+              class="disk error">
+            <span>1 OS Disk</span>
+            <span></span>
+            <span>2 TB</span>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="space-between center"
+              class="disk error">
+            <span>1 Application Disk</span>
+            <span></span>
+            <span>2 TB</span>
+          </div>
+          <div *ngIf="getDiskStrategy() === ''">
+            <div fxLayout="row" fxLayoutAlign="space-between center"
+                class="disk success">
+              <span>4 Free Disks</span>
+              <span></span>
+              <span>8 TB</span>
+            </div>
+          
+            <div fxLayout="row" fxLayoutAlign="space-between center"
+                class="disk success">
+              <span style="padding-left: 20px">1 SSD</span>
+              <span></span>
+              <span>2 TB</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center"
+                class="disk success">              
+              <span style="padding-left: 20px;">3 HDD</span>
+              <span></span>
+              <span>6 TB</span>
+            </div>
+          </div>
+
+          <div *ngIf="getDiskStrategy() === 'rsmp'">
+            <div fxLayout="row" fxLayoutAlign="space-between center"
+                class="disk success">
+                <span>1 Controller Disk (SSD)</span>
+                <span></span>
+                <span>2 TB</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center"
+                class="disk success">
+                <span>3 Storage Disk (HDD)</span>
+                <span></span>
+                <span>6 TB</span>
+            </div>
+          </div>
+          <div *ngIf="getDiskStrategy() === 'msrp'">
+            <div fxLayout="row" fxLayoutAlign="space-between center"
+                class="disk warn">
+                <span>1 Shared Control Disk with OS</span>
+                <span></span>
+                <span>2 TB</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center"
+                class="disk success">
+                <span>4 Storage Disk (SDD + HDD)</span>
+                <span></span>
+                <span>8 TB</span>
+            </div>
+          </div>
+        
+        </div>
+
+
+        <div class="disks-header content"
+            fxLayout="row" fxLayoutAlign="space-between center"
+            *ngIf="getRAID() !== ''">
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>storage</mat-icon>
+            <span style="padding-left: 20px"
+                *ngIf="getRAID() === 'raid1'">
+              1 failure tolerated
+            </span>
+            <span style="padding-left: 20px"
+                *ngIf="getRAID() === 'raid0'">
+              No failures tolerated
+            </span>
+          </div>
+          <span></span>
+          <span>{{getStorageForRAID()}} TB</span>
+        </div>
+
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="start start" style="padding: 20px">
+        <span style="font-size: 32px">Available strategies</span>
+
+        <div style="width: 100%; padding: 10px;" *ngIf="checking_strategies">
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </div>
+
+        <div class="disk-details" style="padding-top: 20px"
+            *ngIf="has_strategies">
+
+          <form [formGroup]="form_group"
+              fxLayout="row" fxLayoutAlign="space-between center">
+            <mat-form-field appearance="fill" style="min-width: 40ch;">
+              <mat-label>Strategy</mat-label>
+              <mat-select formControlName="disks" required>
+                <mat-option value="rsmp">
+                  Reduced Storage, Maximized Performance
+                </mat-option>
+                <mat-option value="msrp">
+                  Maximized Storage, Reduced Performance
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <span style="width: 40px"></span>
+            <mat-form-field appearance="fill" style="min-width: 40ch;">
+              <mat-label>Data Redundancy</mat-label>
+              <mat-select formControlName="redundancy" required>
+                <mat-option value="raid0">
+                  Maximized Storage, Reduced Redundancy
+                </mat-option>
+                <mat-option value="raid1">
+                  Reduced Storage, Maximized Redundancy
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <span></span>
+
+    <div fxLayout="row" fxLayoutAlign="end center" style="width: 100%">
+      <button mat-raised-button class="button-next">
+        Next
+      </button>
+    </div>
+
+  </mat-card>
+
+</div>

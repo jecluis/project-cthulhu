@@ -1,0 +1,46 @@
+.container {
+    background-color: #30BA78;    
+    width: 100vw;
+    height: 100vh;
+}
+
+.content-card {
+    width: 50vw;
+    height: 80vh;
+}
+
+.content {
+    width: 100%;
+}
+
+.success {
+    color: #30BA78;
+}
+
+.error {
+    color: #FF6A52;
+}
+
+.warn {
+    color: orange;
+}
+
+.button-next {
+    background-color: #FF6A52;
+    color: white;
+}
+
+.disks-header {
+    font-size: 32px;
+}
+
+.disks-details {
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 50%;
+    font-size: 24px;
+}
+
+.disk {
+    padding-bottom: 10px;
+}
