@@ -22,6 +22,14 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SetupNetworkComponent } from './setup/setup-network/setup-network.component';
 import { SetupDependenciesComponent } from './setup/setup-dependencies/setup-dependencies.component';
 import { SetupFinishComponent } from './setup/setup-finish/setup-finish.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -33,7 +41,8 @@ import { SetupFinishComponent } from './setup/setup-finish/setup-finish.componen
     SetupStorageComponent,
     SetupNetworkComponent,
     SetupDependenciesComponent,
-    SetupFinishComponent
+    SetupFinishComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +59,13 @@ import { SetupFinishComponent } from './setup/setup-finish/setup-finish.componen
     MatInputModule,
     MatSelectModule,
     MatProgressBarModule,
+    MatGridListModule,
+    MatMenuModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

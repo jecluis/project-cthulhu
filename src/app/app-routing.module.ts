@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { SetupDependenciesComponent } from './setup/setup-dependencies/setup-dependencies.component';
 import { SetupFinishComponent } from './setup/setup-finish/setup-finish.component';
 import { SetupNetworkComponent } from './setup/setup-network/setup-network.component';
@@ -21,6 +22,9 @@ const routes: Routes = [
   },
   { path: 'setup-finish', component: SetupFinishComponent,
     data: { animation: 'setup-finish' }
+  },
+  { path: 'dashboard', component: DashboardComponent,
+    data: { animation: 'dashboard' }
   }
 ];
 
