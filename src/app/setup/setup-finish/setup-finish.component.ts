@@ -38,7 +38,7 @@ export class SetupFinishComponent implements OnInit {
   public cur_msg_idx: number = -1;
 
   public ngOnInit(): void {
-    this.cur_msg_idx = 0;
+    interval(100).pipe(take(1)).subscribe(() => this.cur_msg_idx = 0);
     interval(5000).pipe(take(this.welcome_text.length))
     .subscribe({
       next: (idx: number) => {

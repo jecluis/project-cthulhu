@@ -1,6 +1,6 @@
 import { animate, stagger, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { BehaviorSubject, interval } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 @Component({
@@ -23,7 +23,7 @@ import { take } from 'rxjs/operators';
     ])
   ]
 })
-export class WelcomeComponent implements OnInit {
+export class WelcomeComponent implements OnInit, AfterViewInit {
 
   public animation_state: string = "";
   constructor() { }
@@ -34,9 +34,13 @@ export class WelcomeComponent implements OnInit {
     "Are you ready?"
   ];
   public cur_msg_idx: number = -1;
+  // public cur_msg_idx: BehaviorSubject<number> =
+    // new BehaviorSubject<number>(-1);
 
-  public ngOnInit(): void {
-    this.cur_msg_idx = 0;
+  public ngOnInit(): void { }
+
+  public ngAfterViewInit(): void {
+    interval(100).pipe(take(1)).subscribe(() => this.cur_msg_idx = 0);
     interval(5000).pipe(take(this.welcome_text.length))
     .subscribe({
       next: (idx: number) => {
