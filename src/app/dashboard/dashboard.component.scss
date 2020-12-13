@@ -9,11 +9,19 @@
     width: 90vw;
 }
 
+.mat-drawer-content::-webkit-scrollbar {
+    display: none;
+}
+
+.mat-drawer-content {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .sidenav {
   width: 200px;
 }
 
-// .sidenav .mat-toolbar {
 .sidenav-toolbar {
   background: inherit;
   height: 64px;
