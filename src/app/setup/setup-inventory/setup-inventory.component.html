@@ -1,0 +1,51 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+
+  <mat-card class="mat-elevation-z8 content"
+      fxLayout="column" fxLayoutAlign="space-between start">
+
+    <div matCardTitle>
+      <h1>Let's start</h1>
+      <mat-divider></mat-divider>
+    </div>
+
+    <div matCardContent style="width: 100%;">
+
+      <div fxLayout="row" fxLayoutAlign="start center"
+          *ngIf="hasSuccessInventory()">
+        <mat-icon class="checklist-prefix success">check</mat-icon>
+        <span>Obtained system inventory</span>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center"
+          *ngIf="hasErrorInventory()">
+        <mat-icon class="checklist-prefix error">warning</mat-icon>
+        <span>Error obtaining system inventory</span>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center"
+          *ngIf="isObtainingInventory()">
+        <div class="checklist-prefix">
+          <mat-spinner [diameter]="18"></mat-spinner>
+        </div>
+        <span>Obtaining system inventory</span>
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="start" class="inventory-items">
+        <app-setup-inventory-item *ngFor="let item of inventory_items"
+            [label]="item" (onFinished)="inventoryFinished(item, $event)">
+        </app-setup-inventory-item>
+      </div>
+          
+    </div>
+
+    <span></span>
+
+    <div fxLayout="row" fxLayoutAlign="end center" style="width: 100%">
+      <button mat-raised-button class="button-next"
+        [disabled]="!hasFinishedInventory()"
+        routerLink="/setup-storage">
+        Next
+      </button>
+    </div>
+
+  </mat-card>
+
+</div>

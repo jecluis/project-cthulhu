@@ -31,6 +31,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { OverviewDashboardComponent } from './overview-dashboard/overview-dashboard.component';
+import { SetupInventoryComponent } from './setup/setup-inventory/setup-inventory.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { OverviewDashboardComponent } from './overview-dashboard/overview-dashbo
     SetupDependenciesComponent,
     SetupFinishComponent,
     DashboardComponent,
-    OverviewDashboardComponent
+    OverviewDashboardComponent,
+    SetupInventoryComponent
   ],
   imports: [
     BrowserModule,
