@@ -1,0 +1,43 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+
+  <mat-card class="mat-elevation-z8 content"
+      fxLayout="column" fxLayoutAlign="space-between start">
+
+    <div matCardTitle>
+      <h1>Extend Existing Deployment</h1>
+      <mat-divider></mat-divider>
+    </div>
+
+    <div matCardContent style="width: 100%;">
+          
+      <div fxLayout="column" fxLayoutAlign="center center"
+          *ngIf="!foundNetworkDeployment()">
+        <img src="assets/search.svg" style="width: 150px"
+            [@fadeInOutAnimation]="search_animation_state">
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="center center"
+          *ngIf="foundNetworkDeployment()">
+        <h2>Found network deployment</h2>
+        <div fxLayout="column">
+          <span>Location: ceph.lan (172.20.20.42)</span>
+          <span>Hosts: 2</span>
+          <span>Size: 12 TB (raw)</span>
+          <span>Providing: NFS, iSCSI, S3</span>
+        </div>
+      </div>
+
+    </div>
+
+    <span></span>
+
+    <div fxLayout="row" fxLayoutAlign="end center" style="width: 100%">
+      <button mat-raised-button class="button-next"
+        [disabled]="!foundNetworkDeployment()"
+        routerLink="/setup-inventory">
+        Next
+      </button>
+    </div>
+  </mat-card>
+
+</div>

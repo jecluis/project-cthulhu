@@ -32,6 +32,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { OverviewDashboardComponent } from './overview-dashboard/overview-dashboard.component';
 import { SetupInventoryComponent } from './setup/setup-inventory/setup-inventory.component';
+import { SetupExtendComponent } from './setup/setup-extend/setup-extend.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { SetupInventoryComponent } from './setup/setup-inventory/setup-inventory
     SetupFinishComponent,
     DashboardComponent,
     OverviewDashboardComponent,
-    SetupInventoryComponent
+    SetupInventoryComponent,
+    SetupExtendComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SetupDependenciesComponent } from './setup/setup-dependencies/setup-dependencies.component';
+import { SetupExtendComponent } from './setup/setup-extend/setup-extend.component';
 import { SetupFinishComponent } from './setup/setup-finish/setup-finish.component';
 import { SetupInventoryComponent } from './setup/setup-inventory/setup-inventory.component';
 import { SetupNetworkComponent } from './setup/setup-network/setup-network.component';
@@ -29,7 +30,10 @@ const routes: Routes = [
   },
   { path: 'setup-inventory', component: SetupInventoryComponent,
     data: { animation: 'setup-inventory' }
-  }
+  },
+  { path: 'setup-extend', component: SetupExtendComponent,
+    data: { animation: 'setup-extend' }
+  },
 ];
 
 @NgModule({
